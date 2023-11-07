@@ -13,6 +13,14 @@ dynamicRedirects:
     to: /gray/:splat
     status: 200
   # This is a custom redirect because the status code is 3xx.
+  -
+    from: /rewrite/:color
+    to: /:color
+    status: 200
+  -
+    from: /redirect/*
+    to: /:splat
+    status: 303
 staticRedirects:
   -
     from: /grey-redirect
