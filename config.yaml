@@ -12,7 +12,6 @@ dynamicRedirects:
     from: /grey/*
     to: /gray/:splat
     status: 200
-  # This is a custom redirect because the status code is 3xx.
   -
     from: /rewrite/:color
     to: /:color
@@ -21,11 +20,23 @@ dynamicRedirects:
     from: /redirect/*
     to: /:splat
     status: 303
+  -
+    from: /wow/:c
+    to: /rewrite/:c
+    status: 200
+  -
+    from: /*
+    to: /nope/:splat
+    status: 307
 staticRedirects:
   -
     from: /grey-redirect
     to: /gray
     status: 308
+  -
+    from: /rewrite/red
+    to: /orange
+    status: 200
 # adds authentication to your site. Commented out as a policy with the name auth02 must exist
 # authentication:
 #   policyName: auth02
