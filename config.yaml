@@ -6,7 +6,7 @@ buildConfiguration:
       - package.json
       - package-lock.json
       - .npmrc
-dynamicRedirects:
+dynamicRoutes:
   # This is a rewrite because the status code is 200. It also takes advantage of built-in splat support.
   -
     from: /query/:color
