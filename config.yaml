@@ -14,7 +14,7 @@ dynamicRedirects:
     status: 200
   -
     from: /rewrite/:color
-    to: /:color
+    to: /:color?rerouted=true
     status: 200
   -
     from: /redirect/*
