@@ -9,6 +9,10 @@ buildConfiguration:
 dynamicRedirects:
   # This is a rewrite because the status code is 200. It also takes advantage of built-in splat support.
   -
+    from: /query/:color
+    to: /:color?foo=bar
+    status: 302
+  -
     from: /grey/*
     to: /gray/:splat
     status: 200
